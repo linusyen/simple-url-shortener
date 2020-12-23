@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56abc574c9c50fc6e4b7f5ef2a76cd50",
+    "content-hash": "22fbed6a542f4d6977767645fcc49fb1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5029,16 +5029,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v0.0.5",
+            "version": "v0.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "d9b0575ece889a35b9741789452c1c7abca5bc2f"
+                "reference": "90bca29b485e3cda56ce911a598f8f8bffa6443f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/d9b0575ece889a35b9741789452c1c7abca5bc2f",
-                "reference": "d9b0575ece889a35b9741789452c1c7abca5bc2f",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/90bca29b485e3cda56ce911a598f8f8bffa6443f",
+                "reference": "90bca29b485e3cda56ce911a598f8f8bffa6443f",
                 "shasum": ""
             },
             "require": {
@@ -5080,7 +5080,7 @@
                 "docker",
                 "laravel"
             ],
-            "time": "2020-12-07T20:58:56+00:00"
+            "time": "2020-12-16T14:31:36+00:00"
         },
         {
             "name": "mockery/mockery",
