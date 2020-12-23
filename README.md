@@ -32,7 +32,11 @@ Please provide public git repository
    - `docker-compose exec laravel php artisan migrate`
 1. Run command to generate keys of URL for shortening URL
    - `docker-compose exec laravel php artisan url-key:generate`
-
+## Unit test
+1. Run test cases
+   - `docker-compose exec laravel vendor/bin/phpunit`
+1. Check the coverage report
+   - http://localhost:8088/coverage/
 ## Start to use URL shorten service
 * Default index page is http://localhost:8088
    - You can adjust the default `APP_URL` and `APP_PORT` in `.env` file
