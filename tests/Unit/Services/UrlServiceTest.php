@@ -38,20 +38,12 @@ class UrlServiceTest extends TestCase
     public function testGetUrlByKey()
     {
         $key = '8oEFlG';
-        $mapping = $this->url->getUrlByKey($key);
-        $this->assertEquals($key, $mapping->key);
-        $this->assertEquals('www.google.com', $mapping->url);
-        $this->assertEquals(1, $mapping->is_used);
+        $url = $this->url->getUrlByKey($key);
+        $this->assertEquals('www.google.com', $url);
 
         $key = 'rIgAU6';
-        $mapping = $this->url->getUrlByKey($key);
-        $this->assertEquals($key, $mapping->key);
-        $this->assertEquals('', $mapping->url);
-        $this->assertEquals(0, $mapping->is_used);
-
-        $key = '8oEFl0';
-        $mapping = $this->url->getUrlByKey($key);
-        $this->assertEquals(null, $mapping);
+        $url = $this->url->getUrlByKey($key);
+        $this->assertEquals('', $url);
     }
 
     public function testCreateUrlMapping()

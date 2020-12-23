@@ -26,13 +26,13 @@ class UrlController extends BaseController
     public function redirect($key)
     {
         if ($this->urlService->isValidatedKey($key)) {
-            $mapping = $this->urlService->getUrlByKey($key);
-            if ($mapping) {
+            $url = $this->urlService->getUrlByKey($key);
+            if (!empty($url)) {
                 $protocol = '';
-                if (strpos($mapping->url, 'http://') !== 0 && strpos($mapping->url, 'https://') !== 0) {
+                if (strpos($url, 'http://') !== 0 && strpos($url, 'https://') !== 0) {
                     $protocol = 'http://';
                 }
-                return redirect($protocol . $mapping->url);
+                return redirect($protocol . $url);
             }
         }
         return redirect('/');

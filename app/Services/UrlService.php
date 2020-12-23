@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\UrlMapping;
+use Illuminate\Support\Facades\Cache;
 
 class UrlService
 {
@@ -51,7 +52,11 @@ class UrlService
 
     public function getUrlByKey($key)
     {
-        return UrlMapping::where('key', '=', $key)->first();
+        $url = Cache::remember($key, now()->addDay(), function () use ($key){
+            $mapping = UrlMapping::where('key', '=', $key)->first();
+            return ($mapping) ? $mapping->url : '';
+        });
+        return $url;
     }
 
     public function getUnusedKey()
